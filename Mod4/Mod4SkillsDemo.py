@@ -22,27 +22,26 @@ to trace through the code (line by line) as you explain it.
 grade = int(input("Please enter your grade: "))
 
 if grade>=96 and grade<=100:
-    print("Congradulations you got an A!")
+    print("Congradulations you got an A! 4.0")
 elif grade>=93 and grade<=95:
-    print("You got a A-")
+    print("You got a A- 3.7")   
 elif grade>=90 and grade<=92:
-    print("You got a B+")
+    print("You got a B+ 3.3")   
 elif grade>=87 and grade<=89:
-    print("You got a B")
+    print("You got a B 3.0")    
 elif grade>=83 and grade<=86:
-    print("You got a B-")
+    print("You got a B- 2.7")   
 elif grade>=80 and grade<=82:
-    print("You got a C+")
+    print("You got a C+ 2.3")   
 elif grade>=77 and grade<=79:
-    print("You got a C")
+    print("You got a C 2.0")    
 elif grade>=73 and grade<=76:
-    print("You got a C-, but hey you passed.")
+    print("You got a C-, but hey you passed. 1.7")  
 elif grade>=70 and grade<=72:
-    print("You got a D+, sad days")
+    print("You got a D+, sad days. 1.3") 
 elif grade>=67 and grade<=69:
-    print("You got a D, sad days")
+    print("You got a D, sad days. 1.0") 
 elif grade>=63 and grade<=66:
-    print("You got a D-, sad days")
+    print("You got a D-, sad days. 0.7") 
 elif grade<=62:
-    print("You got a F, what happened?")
-
+    print("You got a F, what happened? 0.3")
