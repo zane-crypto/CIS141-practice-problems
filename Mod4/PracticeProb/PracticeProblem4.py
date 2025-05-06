@@ -7,9 +7,9 @@ R (appropriate for over 18) rated movies.
 
 age = int(input("Please enter your age: "))
 
-if age > 18:
+if age >= 18:
     print("You can watch any movie you want!")
 elif ((age <= 17) and (age >= 13)):
     print("You can watch G and PG-13 movies.")
-elif age < 12:
+else:
     print("You can only watch G movies.")
