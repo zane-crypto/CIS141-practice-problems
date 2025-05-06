@@ -5,11 +5,10 @@ Ask the user for the order total and print the total cost,
 including shipping.
 '''
 
-cost = int(input("Please enter the order total: "))
+cost = float(input("Please enter the order total: "))
 
 if (cost < 50):
     cost = (cost+5)
-    print("Your cost including shipping ", cost)
+    print(f"Your cost including shipping: {cost:.2f}")
 else:
-    print("You get free shipping! Total cost is : ", cost)
-  
+    print(f"You get free shipping! Total cost is: {cost:.2f}")
