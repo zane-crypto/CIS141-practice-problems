@@ -35,8 +35,19 @@ def type_advantage(attacker, defender):
     else:
         return "Please enter valid pokemon types"
 
-print("Available types are fire, water, grass, and electric.")
-attacker1 = input("Please enter an attacker pokemon type: ")
-defender1 = input("Please enter a defender pokemon type: ")
 
+print("Available types are fire, water, grass, and electric.")
+choices = ["fire", "water", "grass", "electric"]
+attacker1 = ""
+defender1 = ""
+while attacker1.lower() not in choices:
+    attacker1 = input("Please enter an attacker pokemon type: ")
+    if attacker1.lower() not in choices:
+        print("Please enter valid input...")
+        
+while defender1.lower() not in (choices):
+    defender1 = input("Please enter a defender pokemon type: ")
+    if attacker1.lower() not in choices:
+        print("Please enter valid input...")
+        
 print(type_advantage(attacker1.lower(),defender1.lower()))
