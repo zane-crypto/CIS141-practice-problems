@@ -7,27 +7,31 @@ State Ferry fare based on age and whether the person has a vehicle. Assume the f
 '''
 
 def ferry_fare(age, vehicle):
-    if vehicle == True:
-        bool = True
-    else:
-        bool = False
-
-
-    if age <= 18:
-        return "Free"
-    elif age >= 19 and age <= 64 and bool == True:
+    if age >= 19 and age <= 64 and vehicle == True:
         return "$20"
     elif age >= 19 and age <= 64:
         return "$10"
-    elif age >= 65 and bool == True:
+    elif age >= 65 and vehicle == True:
         return "$15"
     elif age >= 65:
         return "$5"
-    
-    
-age1 = int(input("Please enter your age: "))
-bool1 = False
-if age1 > 18:
-    bool1 = bool(input("Enter 'Yes' if you have a car: "))
 
-print("Your fare is", ferry_fare(age1, bool1))
+def yes_no_question(question):
+    while True:
+        answer = input(question + " (yes/no): ").lower()
+        if answer in ["yes", "no"]:
+            true_false = {
+                "yes": True,
+                "no": False
+            }
+            return true_false[answer]
+        else:
+            print("Please answer 'yes' or 'no'.")
+
+age1 = int(input("How old are you: "))
+if age1 > 18:
+    has_car = "Do you have a car?"
+    print("Your fare is", ferry_fare(age1, yes_no_question(has_car)))
+else:
+    print("Your fare is free!")
+    
