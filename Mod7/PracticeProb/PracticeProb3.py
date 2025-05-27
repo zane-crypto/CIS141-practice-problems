@@ -1,8 +1,8 @@
 '''
-#3. In the game Pokemon, certain types of Pokemon do extra damage to 
+#3. In the game Pokemon, certain types of Pokemon do extra damage to
 other types. For example, water is very effective to fight fire.
-Write a function called type_advantage(attacker, defender) that takes 
-two Pokémon types as strings and returns "Super Effective", 
+Write a function called type_advantage(attacker, defender) that takes
+two Pokémon types as strings and returns "Super Effective",
 "Not Very Effective", or "Neutral" based on simple type effectiveness
 rules. Your solution only needs to work for these three sets of input:
 
@@ -39,4 +39,4 @@ print("Available types are fire, water, grass, and electric.")
 attacker1 = input("Please enter an attacker pokemon type: ")
 defender1 = input("Please enter a defender pokemon type: ")
 
-print(type_advantage(attacker1,defender1))
+print(type_advantage(attacker1.lower(),defender1.lower()))
