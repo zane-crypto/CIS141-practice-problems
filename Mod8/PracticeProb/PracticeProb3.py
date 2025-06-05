@@ -7,22 +7,24 @@ it. Write a Python program that:
 - Creates a dictionary of the words and their counts
 - Print the dictionary to the console
 '''
+
 import string
-translator = str.maketrans('', '', string.punctuation)
 
 word_list = []
 word_count = {}
 count = 0
+punc = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~" + '"'
 
 while count < 5:
-        user_input = input("Please enter a word to count: ")
-        word_list.append(user_input.lower())
+        user_input = input("Please enter a word to count: ").lower()
+        word_list.append(user_input)
         count += 1
-
+        
 with open("song_lyrics.txt", "r") as song:
     song_string = song.read()
-    clean_song = song_string.translate(translator)
-    song_list = clean_song.lower().split()
+    for c in punc:
+        song_string= song_string.replace(c,"")
+    song_list = song_string.lower().split()
 
     for word in song_list:
         if word in word_list:
